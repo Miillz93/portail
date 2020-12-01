@@ -1,0 +1,27 @@
+﻿@model portail.Models.Produit
+
+@{
+    ViewBag.Title = "CatalogueDetails";
+}
+
+
+<div style="margin: 150px 0px"></div>
+<div class="container my-5">
+    <div class="row">
+        <div class="col-9 mx-auto mb-2">
+            <div class="card" style="width: 18rem;">
+                <img src="@Html.DisplayFor(model => model.imgUrl)" alt="Alternate Text" class="card-img-top" width="100%" />
+                <div class="card-body">
+                    <div class="card-title text-info">
+                        @Html.DisplayFor(model => model.Reference)
+                    </div>
+                    <div class="card-text">
+                        @Html.DisplayFor(model => model.Description)    
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+

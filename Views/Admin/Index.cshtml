@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Admin";
+}
+
+<div style="margin: 150px 0px"></div>
+<div class="container my-5">
+    <div class="row text-center">
+        <div class="col-5 mx-auto">
+            <div class="card">
+                <div class="card-header">Dashboard</div>
+                <div class="card-body">
+                    Bienvenue dans votre espace Admin
+                </div>
+            </div> <br />
+            <div class="card">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">@Html.ActionLink("Gestion des catégories", "GetAllCategories", "Admin", new { area = "" }, new { @class = "navbar-brand" }) </li>
+                    <li class="list-group-item">@Html.ActionLink("Gestion des produits", "GetAllProducts", "Admin", new { area = "" }, new { @class = "navbar-brand" }) </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+

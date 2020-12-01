@@ -1,0 +1,42 @@
+﻿@model IEnumerable<portail.Models.Produit>
+@{
+    ViewBag.Title = "Admin Product";
+}
+
+<div style="margin: 150px 0px"></div>
+<div class="container my-5">
+    <div class="row">
+        <div class="col-7 mx-auto mb-2">
+            @Html.ActionLink("Ajouter", "CreateProduit", "Admin", new { area = "" }, new { @class = "btn btn-primary" })
+
+        </div>
+        <div class="col-7 text-center mx-auto">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>#</th>
+                        <th>Libelle</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <th scope="row">@Html.DisplayFor(modelItem => item.Produit_id)</th>
+                            <td>@Html.DisplayFor(modelItem => item.Reference) </td>
+                            <td>
+                                @Html.ActionLink("Edit", "EditProduit", "Admin", new { id = item.Produit_id}, new { @class = "btn btn-info" })
+                                @Html.ActionLink("Delete", "DeleteProduit", "Admin", new { id = item.Produit_id}, new { @class = "btn btn-danger" })
+
+                            </td>
+                        </tr>
+
+                    }
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+

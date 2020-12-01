@@ -1,0 +1,43 @@
+﻿
+@model portail.Models.Produit
+
+@{
+    ViewBag.Title = "Delete Product";
+}
+
+<div style="margin: 150px 0px"></div>
+<div class="container my-5">
+    <div class="row">
+        <div class="col-5 mx-auto ">
+            <div class="card">
+                <div class="card-header text-center">Delete Produit</div>
+                <div class="card-body">
+                    @using (Html.BeginForm("DeleteProduitConfirmed", "Admin", FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
+
+                        @Html.HiddenFor(model => model.Produit_id)
+                        <div class="card-body">
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.Reference, new { htmlAttributes = new { @class = "form-control", @readonly = "true" } })
+
+                            </div>
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control", @readonly = "true" } })
+
+                            </div>
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.prix, new { htmlAttributes = new { @class = "form-control", @readonly = "true" } })
+
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" name="submit" class="btn btn-danger" value="Supprimer" />
+                            </div>
+
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+﻿@model IEnumerable < portail.Models.Produit>
+@{
+    ViewBag.Title = "Catalogue";
+}
+
+<div style="margin: 150px 0px"></div>
+<div class="container my-5">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="@Html.DisplayFor(modelItem => item.imgUrl)" alt="Alternate Text"   class="card-img-top" width="300"/>
+                    <div class="card-body">
+                        <div class="card-title">
+                            @Html.DisplayFor(modelItem => item.Reference) <br />
+                            @Html.ActionLink("Details", "CatalogueDetails", "Home", new { id = item.Produit_id }, new { @class = "" })
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
