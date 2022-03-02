@@ -89,4 +89,3 @@ C:\Users\romaa\source\repos\portail\obj\Debug\portail.dll
 C:\Users\romaa\source\repos\portail\obj\Debug\portail.pdb
 C:\Users\romaa\source\repos\portail\obj\Debug\portail.Migrations.Initial.resources
 C:\Users\romaa\source\repos\portail\obj\Debug\portail.csproj.GenerateResource.cache
-C:\Users\romaa\source\repos\portail\obj\Debug\portail.csprojAssemblyReference.cache
