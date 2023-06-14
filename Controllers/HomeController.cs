@@ -21,6 +21,10 @@ namespace portail.Controllers
         public ActionResult Catalogue()
         {
             ViewBag.Message = "Catalogue page.";
+            if (db.Produits.Count() == 0)
+            {
+                return View("Catalogue");
+            }
 
             return View("Catalogue", db.Produits.ToList());
         }

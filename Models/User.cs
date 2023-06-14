@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.AspNet.Identity.EntityFramework;
 using System.Linq;
 using System.Web;
 
 namespace portail.Models
 {
-    public class User: IdentityUser
+    public class User
     {
         public string Firstname { get; set; }
         public string Lastname { get; set; }
